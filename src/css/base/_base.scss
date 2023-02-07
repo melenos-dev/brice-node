@@ -3,6 +3,10 @@
   font-family: "proxima_thin";
   src: url("../../../public/files/fonts/Proxima_Thin.otf");
 }
+@font-face {
+  font-family: "proxima_bold";
+  src: url("../../../public/files/fonts/Proxima_Bold.otf");
+}
 
 * {
   box-sizing: border-box;
@@ -118,7 +122,7 @@ a {
   text-decoration: none;
   color: white;
   transition: all 0.5s ease;
-  font-weight: bold;
+  font: 400 16px "proxima_bold", "Source Sans Pro", sans-serif;
 
   &:hover {
     color: white;
@@ -182,6 +186,7 @@ h4,
 h5,
 h6 {
   color: white;
+  font-family: "proxima_bold", "Source Sans Pro", sans-serif;
 }
 
 img {

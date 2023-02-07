@@ -6,6 +6,7 @@ const variants = {
     return {
       y: direction > 0 ? "100vh" : "-100vh",
       opacity: 0,
+      duration: 1,
     };
   },
   center: {
@@ -17,6 +18,7 @@ const variants = {
     return {
       zIndex: 0,
       y: direction < 0 ? "100vh" : "-100vh",
+      duration: 1,
       opacity: 0,
     };
   },
@@ -44,7 +46,7 @@ function Slider({
             exit="exit"
             transition={{
               y: { type: "spring", stiffness: 1500, damping: 30 },
-              opacity: { duration: 0.3 },
+              opacity: { duration: 1 },
             }}
           >
             {currentSlide === 0 && <Logo />}
