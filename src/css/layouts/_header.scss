@@ -1,0 +1,88 @@
+header {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  .navbar {
+    padding: var(--bs-gutter-x) !important;
+
+    &__item {
+      margin-right: 30px;
+      font-weight: bold;
+      white-space: nowrap;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      & a {
+        color: $tertiary;
+        position: relative;
+        display: block;
+        height: 30px;
+
+        &:hover,
+        &.active {
+          color: white;
+        }
+      }
+    }
+
+    .navbar-nav {
+      > li {
+        margin-right: 0;
+        width: 0px;
+      }
+
+      &:hover div a:not(:hover) {
+        color: $tertiary !important;
+
+        &::after {
+          border-color: $tertiary;
+        }
+      }
+    }
+
+    div {
+      li {
+        &:first-child {
+          margin-left: 30px;
+        }
+        a::after {
+          position: absolute;
+          border-bottom: 2px solid #4861ac;
+          top: 85%;
+          left: 0;
+          width: 24%;
+          content: "";
+          height: 4px;
+          transform: scaleX(0);
+          transform-origin: right;
+          transition: transform 0.5s, border-color 0.5s;
+        }
+
+        a.active::after,
+        a:hover::after {
+          transform: scaleX(1);
+        }
+      }
+
+      button {
+        background: url(../../img/sprites/Home.png) no-repeat;
+        height: 30px;
+        width: 30px;
+        background-position: -10px -10px;
+        display: block;
+        border: none;
+        transition: none;
+        box-shadow: none;
+        margin-right: 0;
+
+        &:hover {
+          background-position: -50px -10px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+a {
+  &.button {
+    width: 186px;
+    height: 51px;
+    line-height: 35px;
+    color: #ffffff;
+    background: url(../../img/sprites/portfolio-buttons.png) no-repeat;
+    text-align: center;
+    transition: none;
+    display: block;
+
+    &__blue {
+      background-position: -40px -40px;
+      &:hover {
+        background-position: -266px -40px;
+      }
+    }
+
+    &__pink {
+      margin-right: 50px;
+      background-position: -40px -122px;
+
+      &:hover {
+        background-position: -266px -122px;
+      }
+    }
+  }
+}

@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+@font-face {
+  font-family: "proxima_thin";
+  src: url("../../../public/files/fonts/Proxima_Thin.otf");
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  overflow: visible;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+
+  body {
+    font: 400 16px "proxima_thin", "Source Sans Pro", sans-serif;
+    background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 1) 46%,
+      rgba(81, 89, 167, 1) 100%
+    );
+
+    @include mobile-only {
+      background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(0, 0, 0, 1) 48%,
+        rgba(81, 89, 167, 1) 100%
+      );
+    }
+  }
+}
+
+#root {
+  .container-fluid {
+    --bs-gutter-x: 40px;
+  }
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.file {
+  color: white !important;
+  font-size: 12px;
+
+  &:hover > .end {
+    color: white;
+  }
+
+  .end {
+    color: $tertiary;
+    transition: all 0.5s;
+  }
+}
+
+::selection,
+::-moz-selection,
+::-webkit-selection {
+  background-color: $tertiary;
+  color: $primary;
+}
+
+main {
+  flex-flow: row nowrap;
+  padding: 0 !important;
+  background: url(../../img/Custom-Circles-Cut.png) no-repeat 0% 100% fixed;
+  position: relative;
+  overflow: hidden;
+
+  #comet {
+    background: url(../../img/Comet-Cut.png) no-repeat;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  .page:not(:first-child) {
+    margin-left: -100%;
+    font-size: 1.1em;
+    z-index: 1;
+
+    & > div:first-child {
+      align-self: end;
+    }
+  }
+
+  .page:first-child {
+    & > div {
+    }
+  }
+
+  .page {
+    flex: none;
+    width: 100%;
+    min-height: 100vh;
+    padding: 110px var(--bs-gutter-x) 0px var(--bs-gutter-x) !important;
+  }
+}
+
+p {
+  color: $tertiary;
+  line-height: 30px;
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  transition: all 0.5s ease;
+  font-weight: bold;
+
+  &:hover {
+    color: white;
+  }
+
+  &.highlight:hover {
+    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  }
+}
+
+h1 {
+  font-size: 2.2em;
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.4em;
+}
+
+h3 {
+  font-size: 1.1em;
+}
+
+h1 {
+  & b {
+    background: -webkit-linear-gradient(
+      rgba(63, 105, 178, 1) 0%,
+      rgba(83, 86, 165, 1) 100%
+    );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  & i {
+    color: $tertiary;
+  }
+
+  color: white;
+  position: relative;
+  padding: 0px 20px 10px 20px;
+  margin-bottom: 60px;
+  font-weight: bolder;
+
+  &::after {
+    position: absolute;
+    border-bottom: 2px solid white;
+    top: 100%;
+    left: 0;
+    right: 0;
+    width: 55%;
+    content: "";
+    height: 4px;
+    margin: 0 auto;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: white;
+}
+
+img {
+  width: 100%;
+}
+
+// ANIMATIONS
+
+@keyframes scale-1 {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes rotate-0 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-1 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate-2 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes rotate-3 {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
