@@ -2,6 +2,9 @@ import { NavLink } from "react-router-dom";
 import useMediaQuery from "../hooks/useMediaQuery";
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import useSound from "use-sound";
+import lazerSound from "../sounds/laser.wav";
+import jumpSound from "../sounds/jump.wav";
 
 const CardLabel = styled.span``;
 /*
@@ -22,6 +25,8 @@ export default function Menu() {
   };*/
 
   const matches = useMediaQuery("(min-width:768px)");
+  const [jump] = useSound(jumpSound);
+  const [lazer] = useSound(lazerSound);
 
   return (
     <nav className="navbar navbar-expand container-fluid">
@@ -47,7 +52,7 @@ export default function Menu() {
             hidden: { opacity: 0, scale: 0 },
           }}
         >
-          <a href="files/papers.pdf" className="file">
+          <a href="files/papers.pdf" className="file" onMouseEnter={lazer}>
             Papiers<span className="end">.pdf</span>
           </a>
         </motion.li>
@@ -84,7 +89,9 @@ export default function Menu() {
               </li>
 
               <li className="navbar__item">
-                <NavLink to="mailto:hello@seraphinbrice.fr">Contact</NavLink>
+                <NavLink to="mailto:hello@seraphinbrice.fr" onMouseEnter={jump}>
+                  Contact
+                </NavLink>
               </li>
             </div>
           </div>

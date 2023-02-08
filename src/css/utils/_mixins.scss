@@ -10,6 +10,12 @@
   }
 }
 
+@mixin largeScreen-only {
+  @media screen and (min-width: map-get($breakpoints, largeScreen)) {
+    @content;
+  }
+}
+
 @mixin text-shadow {
   text-shadow: -0.5px 1px 5px rgba(255, 255, 255, 0.5);
 }

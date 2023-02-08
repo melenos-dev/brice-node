@@ -1,0 +1,31 @@
+
+
+	//  French GEEK's IN FREELANCE  //
+
+
+	--- ROBOT N1 
+	.Seraphin Brice - UIX & Print Designer
+	Contact: hello@seraphinbrice.fr
+	Dribbble Pro: https://dribbble.com/seraphinbrice
+	From: Normandie, France
+
+
+	--- ROBOT #2
+	.Ducret Yann - Developer
+	Contact: hello@melenos-devloppement.fr
+	Codepen: 
+	From: Bretagne, France
+	
+                            
+	*/ SITE INFOS /*
+                            
+	Last update: 2022/11/21
+	Standards: Fully HTML5, CSS3 & Javascript
+	Components: Modernizr & jQuery
+	Software: Pohtoshop CC & Sublime Text
+
+
+	#VALIDATOR W3  ->  https://validator.w3.org/nu/?doc=https%3A%2F%2Fseraphinbrice.fr%2F
+
+
+	Sb_ Copyright 2k22.

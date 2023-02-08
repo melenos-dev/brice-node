@@ -4,9 +4,8 @@ import Logo from "../Logo/index";
 const variants = {
   enter: (direction) => {
     return {
-      y: direction > 0 ? "100vh" : "-100vh",
+      y: direction > 0 ? "500vh" : "-500vh",
       opacity: 0,
-      duration: 1,
     };
   },
   center: {
@@ -17,8 +16,7 @@ const variants = {
   exit: (direction) => {
     return {
       zIndex: 0,
-      y: direction < 0 ? "100vh" : "-100vh",
-      duration: 1,
+      y: direction < 0 ? "500vh" : "-500vh",
       opacity: 0,
     };
   },
@@ -45,8 +43,8 @@ function Slider({
             animate="center"
             exit="exit"
             transition={{
-              y: { type: "spring", stiffness: 1500, damping: 30 },
-              opacity: { duration: 1 },
+              y: { type: "spring", stiffness: 4000, damping: 30 },
+              opacity: { duration: 1.5 },
             }}
           >
             {currentSlide === 0 && <Logo />}

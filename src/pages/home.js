@@ -58,7 +58,7 @@ export default function Home() {
               hidden: { opacity: 0, scale: 0 },
             }}
           >
-            <a href="#" className="file">
+            <a href="files/humans.txt" className="file">
               &copy; Sb_2K22<span className="end">.txt</span>
             </a>
           </motion.div>
