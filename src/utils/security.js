@@ -15,7 +15,7 @@ exports.onlyAlphanumeric = (str) => {
 };
 
 exports.mail = (str) => {
-  const reg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  const reg = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
   if (str.match(reg) == null) return false;
   else return true;
 };

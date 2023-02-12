@@ -1,12 +1,10 @@
 import { NavLink } from "react-router-dom";
 import useMediaQuery from "../hooks/useMediaQuery";
-import styled from "styled-components";
 import { motion } from "framer-motion";
 import useSound from "use-sound";
 import lazerSound from "../sounds/laser.wav";
 import jumpSound from "../sounds/jump.wav";
 
-const CardLabel = styled.span``;
 /*
 import useAuth from "../hooks/useAuth";
 import { useNavigate } from "react-router-dom";
