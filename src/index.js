@@ -10,20 +10,19 @@ import { dom, library } from "@fortawesome/fontawesome-svg-core";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { AuthProvider } from "./utils/context/AuthProvider";
+//import { AuthProvider } from "./utils/context/AuthProvider";
 import { BrowserRouter } from "react-router-dom";
 
 library.add(fas);
 dom.watch();
-const root = ReactDOM.createRoot(document.getElementById("root"));
+const el = document.getElementById("app");
+const root = ReactDOM.createRoot(el);
 document.documentElement.lang = "fr";
 
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <AuthProvider>
-        <App />
-      </AuthProvider>
+      <App />
     </BrowserRouter>
   </React.StrictMode>
 );

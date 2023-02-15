@@ -1,3 +1,4 @@
+import React from "react";
 import Menu from "./components/Menu.js";
 import Footer from "./components/Footer";
 import AnimatedRoutes from "./components/AnimatedRoutes";
@@ -5,7 +6,7 @@ import { useEffect, useState } from "react";
 import Loader from "./components/Loader";
 import { AnimatePresence, motion } from "framer-motion";
 
-function App() {
+const App = () => {
   const [loader, setLoader] = useState(true);
   useEffect(() => {
     setTimeout(() => setLoader(false), 500);
@@ -60,6 +61,6 @@ function App() {
       )}
     </AnimatePresence>
   );
-}
+};
 
 export default App;

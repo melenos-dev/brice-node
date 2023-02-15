@@ -1,3 +1,4 @@
+import React from "react";
 import { useState, useEffect } from "react";
 import "../css/pages/home.scss";
 import { wrap, motion, AnimatePresence } from "framer-motion";

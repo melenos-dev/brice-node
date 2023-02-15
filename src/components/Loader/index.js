@@ -1,3 +1,4 @@
+import React from "react";
 import Backdrop from "../Backdrop/index";
 
 export default function Loader() {

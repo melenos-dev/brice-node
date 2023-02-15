@@ -1,3 +1,4 @@
+import React from "react";
 import logoPath from "../../img/logo/sb.png";
 import { motion, AnimatePresence } from "framer-motion";
 

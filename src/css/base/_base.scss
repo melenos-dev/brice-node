@@ -1,11 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
 @font-face {
   font-family: "proxima_thin";
-  src: url("../../../public/files/fonts/Proxima_Thin.otf");
+  src: url("../../public/files/fonts/Proxima_Thin.otf");
 }
 @font-face {
   font-family: "proxima_bold";
-  src: url("../../../public/files/fonts/Proxima_Bold.otf");
+  src: url("../../public/files/fonts/Proxima_Bold.otf");
 }
 
 * {
@@ -37,7 +37,7 @@ html {
   }
 }
 
-#root {
+#app {
   .container-fluid {
     --bs-gutter-x: 40px;
   }
@@ -71,12 +71,12 @@ html {
 main {
   flex-flow: row nowrap;
   padding: 0 !important;
-  background: url(../../img/Custom-Circles-Cut.png) no-repeat 0% 100% fixed;
+  background: url(../img/Custom-Circles-Cut.png) no-repeat 0% 100% fixed;
   position: relative;
   overflow: hidden;
 
   #comet {
-    background: url(../../img/Comet-Cut.png) no-repeat;
+    background: url(../img/Comet-Cut.png) no-repeat;
     width: 50px;
     height: 50px;
     position: absolute;
@@ -191,54 +191,4 @@ h6 {
 
 img {
   width: 100%;
-}
-
-// ANIMATIONS
-
-@keyframes scale-1 {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(0.9);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-@keyframes rotate-0 {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes rotate-1 {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes rotate-2 {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(-360deg);
-  }
-}
-
-@keyframes rotate-3 {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(0deg);
-  }
 }
