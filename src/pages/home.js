@@ -5,10 +5,41 @@ import { wrap, motion, AnimatePresence } from "framer-motion";
 import Slider from "../components/Slider/index";
 import { slides } from "../components/Slider/SlideData";
 
+const useKeyPress = function (targetKey) {
+  const [keyPressed, setKeyPressed] = useState(false);
+
+  const downHandler = ({ key }) => {
+    if (key === targetKey) {
+      setKeyPressed(true);
+    }
+  };
+
+  const upHandler = ({ key }) => {
+    if (key === targetKey) {
+      setKeyPressed(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("keydown", downHandler);
+    window.addEventListener("keyup", upHandler);
+
+    return () => {
+      window.removeEventListener("keydown", downHandler);
+      window.removeEventListener("keyup", upHandler);
+    };
+  });
+
+  return keyPressed;
+};
+
 export default function Home() {
   const [[currentSlide, direction], setCurrentSlide] = useState([0, 0]);
   const [arrowDirection, setArrowDirection] = useState(0);
   const slideIndex = wrap(0, slides.length, currentSlide);
+
+  const downPress = useKeyPress("ArrowDown");
+  const upPress = useKeyPress("ArrowUp");
 
   const paginate = (newDirection) => {
     setCurrentSlide([currentSlide + newDirection, newDirection]);
@@ -19,6 +50,17 @@ export default function Home() {
       ? slides.length === currentSlide + 1 && setArrowDirection(1)
       : 0 === currentSlide && setArrowDirection(0);
   }, [currentSlide, arrowDirection]);
+
+  useEffect(() => {
+    if (downPress) {
+      slides.length !== slideIndex + 1 && paginate(1);
+    }
+  }, [downPress]);
+  useEffect(() => {
+    if (upPress) {
+      0 !== slideIndex && paginate(-1);
+    }
+  }, [upPress]);
 
   return (
     <motion.div
