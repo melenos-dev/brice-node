@@ -16,7 +16,7 @@ module.exports = {
   devServer: {
     port: 3030, // you can change the port
     compress: true,
-    allowedHosts: "auto" | "all" | Array[string],
+    allowedHosts: "auto" | "all",
   },
   module: {
     rules: [
